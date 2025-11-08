@@ -37,8 +37,11 @@ document.getElementById("recForm").addEventListener("submit", async (e) => {
   let artist = document.getElementById("artist").value;
  
 
-  const response = await fetch(`/api/recommend?seeds=${encodeURIComponent(artist)}&genres=${encodeURIComponent(genre)}`);
-
+  const response = await fetch("/api/search", {
+    method: "post",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ artist, genre })
+  });
   
   const data = await response.json();
 

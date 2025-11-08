@@ -10,8 +10,8 @@ const app = express();
 dotenv.config();
 
 
-const htmlFile = fs.readFileSync(path.join(__dirname, "../index.html"), "utf-8");
-const errorHtml = fs.readFileSync(path.join(__dirname, "../error.html"), "utf-8");
+const htmlFile = fs.readFileSync(path.join(__dirname, "../../index.html"), "utf-8");
+const errorHtml = fs.readFileSync(path.join(__dirname, "../../error.html"), "utf-8");
 
 
 app.get("/", (req, res) => {

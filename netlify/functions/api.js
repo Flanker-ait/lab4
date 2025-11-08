@@ -9,9 +9,10 @@ const querystring = require("querystring");
 const app = express();
 dotenv.config();
 
-// ✅ FIX: Use __dirname to find the correct root path
-const htmlFile = fs.readFileSync(path.join(__dirname, "../../index.html"), "utf-8");
-const errorHtml = fs.readFileSync(path.join(__dirname, "../../error.html"), "utf-8");
+
+const htmlFile = fs.readFileSync(path.join(__dirname, "../index.html"), "utf-8");
+const errorHtml = fs.readFileSync(path.join(__dirname, "../error.html"), "utf-8");
+
 
 app.get("/", (req, res) => {
   res.send(htmlFile);

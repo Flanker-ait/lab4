@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music App</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
 </head>
 <body>
-    <form action="/search" id="recForm" method="POST">
+  <form id="recForm">
+    <h3 class="mb-3">Welcome to my music discovery app</h3>
 
-        <h3 class="mb-3">Welcome to my music discovery app</h3>
-
-        <label for="artist">Reconmand by Artist</label>
-        <div class="form-floating">
-            <input type="text" class="form-control" name="artist" id="artist">
-        </div>
-        <button class="btn btn-primary w-80 py-2" type="submit" id="searchOne">Reconmand</button>
-        <br>
-
-        <label for="genre">Reconmand by Genres</label>
-        <div class="form-floating">
-            <input type="text" name="genre" id="genre" class="form-control">
-        </div>
-        <button class="btn btn-primary w-80 py-2" type="submit" id="searchTwo">Reconmand</button>
-        <br>
-    </form>
-
-    <div id="contentDisplay">Here is the content display area</div>
-<script>
-document.getElementById("recForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const contentDiv = document.getElementById("contentDisplay");
-
-  let genre = document.getElementById("genre").value;
-  let artist = document.getElementById("artist").value;
- 
-
-  const response = await fetch("/api/search", {
-    method: "GET",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ artist, genre })
-  });
-  
-  const data = await response.json();
-
-  if (!data.found) {
-    contentDiv.innerHTML = data;
-    return;
-  }
-
-  const songList = data.songs.map(song => `
-    <div class="card p-2 mb-2 shadow-sm">
-      <h3>${song.title}</h3>
-      <p><strong>Artist:</strong> ${song.artist}</p>
-      <p><strong>Album:</strong> ${song.album}</p>
-      <p><strong>Year:</strong> ${song.year}</p>
+    <label for="artist">Recommend by Artist</label>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="artist" id="artist" />
     </div>
-  `).join("");
 
-  contentDiv.innerHTML = `
-    <h3 class="text-center mt-3 mb-3">Search Results</h3>
-    ${songList}
-  `;
-});
-</script>
+    <label for="genre">Recommend by Genre</label>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="genre" id="genre" />
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" type="submit">
+      Recommend
+    </button>
+  </form>
+
+  <div id="contentDisplay" class="mt-4">Here is the content display area</div>
+
+  <script>
+    document.getElementById("recForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const contentDiv = document.getElementById("contentDisplay");
+
+      const artist = document.getElementById("artist").value.trim();
+      const genre = document.getElementById("genre").value.trim();
+
+      // Build query URL for GET endpoint
+      const url = `/api/recommend?seeds=${encodeURIComponent(artist)}&genres=${encodeURIComponent(genre)}`;
+      console.log("Fetching:", url);
+
+      try {
+        const response = await fetch(url); // GET request, no body
+        if (!response.ok) {
+          throw new Error(`Server error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Received:", data);
+
+        if (!data.artists || data.artists.length === 0) {
+          contentDiv.innerHTML = "<p>No results found.</p>";
+          return;
+        }
+
+        // Render artist cards
+        const artistCards = data.artists
+          .map(
+            (a) => `
+            <div class="card p-3 mb-3 shadow-sm">
+              <h4>${a.name}</h4>
+              <p><strong>Genres:</strong> ${a.genres?.join(", ") || "Unknown"}</p>
+              <p><strong>Because of:</strong> ${a.becauseOf?.join(", ") || "N/A"}</p>
+              <a href="${a.externalUrl || "#"}" target="_blank">View on iTunes</a>
+            </div>
+          `
+          )
+          .join("");
+
+        contentDiv.innerHTML = `
+          <h3 class="text-center mt-3 mb-3">Recommended Artists</h3>
+          ${artistCards}
+        `;
+      } catch (err) {
+        console.error("Fetch error:", err);
+        contentDiv.innerHTML = `<p class="text-danger">Error: ${err.message}</p>`;
+      }
+    });
+  </script>
 </body>
 </html>

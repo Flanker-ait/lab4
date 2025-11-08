@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 // POST /api/search
-app.post("/api/search", async (req, res) => {
+app.get("/api/search", async (req, res) => {
   console.log("POST /api/search hit");
 
   let reqData = "";

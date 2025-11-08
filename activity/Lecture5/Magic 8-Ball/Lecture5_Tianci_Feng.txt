@@ -1,0 +1,29 @@
+# Activity
+
+**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
+
+* *Date Created*: 05-10-2025
+* *Last Modification Date*: 05-10-2025
+Timberlea LINK: https://web.cs.dal.ca/~tfeng/csci3172/activity/lecture5/
+Gitlab link: https://git.cs.dal.ca/tfeng/csci3172/-/tree/main/activity/Lecture5?ref_type=heads
+
+
+## Authors
+
+If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
+
+* [Tianci Feng](tn388816@dal.ca) - (Author)
+
+
+
+## Built With
+
+* [VsCode] used to write code
+
+
+
+## Sources Used
+
+https://magic-8ball.com/magic-8-ball-answers/ - used for magic-8-ball answers
+https://www.best-ever-cookie-collection.com/fortune-cookie-sayings.html - used for fortune cookie saying
+

@@ -1,0 +1,44 @@
+# Activity / Lab / Assignment / Project Title
+
+**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
+
+* *Date Created*: 02-10-2025
+* *Last Modification Date*: 02-10-2025
+* *Lab URL*: <http://example.com/>
+Timberlea URL:  https://web.cs.dal.ca/~tfeng/csci3172/labs/lab1/
+Git lab URL: https://git.cs.dal.ca/tfeng/csci3172/-/tree/main/lab/lab1?ref_type=heads
+
+
+## Authors
+
+If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
+
+* [Tianci Feng](tn388816@dal.ca) - (Author)
+* [Name](email@dal.ca) - (Role)
+* [Name](email@dal.ca) - (Role)
+* [Name](email@dal.ca) - (Role)
+* [Name](email@dal.ca) - (Role)
+
+
+## Built With
+
+<!--- Provide a list of the frameworks used to build this application, your list should include the name of the framework used, the url where the framework is available for download and what the framework was used for, see the example below --->
+
+* [Google](https://www.google.com/) - Resources Collection
+* [VSCODE] - Used to generate code
+* [w3cschools] https://www.w3schools.com/cssref/func_clamp.php -used to understand the concept of clamp functionn
+
+
+
+## Sources Used
+
+If in completing your lab / assignment / project you used any interpretation of someone else's code, then provide a list of where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
+
+There are eleven pictures that I used in this website
+fleetWeek.jpg, fordFour.jpg, fordNight.jpg, fordOne.jpg, fordThree.jpg, fordTwo.jpg, q5.jpg, TianJin.jpg are all the photos that I took before
+
+AsenalTeamLineUp.png is from website: https://aftv.co.uk/latest-arsenal-news-transfer-updates-aftv/arsenal-fc-more-than-just-a-football-club/
+
+RiceAnd.jpg is from website: https://ca.sports.yahoo.com/news/arsenal-martin-zubimendi-declan-rice-111803586.html
+
+RiceAndGabreil is from website: https://www.cnn.com/2025/03/05/sport/arsenal-psv-champions-league-spt-intl

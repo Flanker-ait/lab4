@@ -1,0 +1,52 @@
+h1 {
+  font-size: 9vw;
+  color: navy;
+  text-align: center;
+  background-color: aqua;  
+  margin: 0;
+  width:100vw
+ 
+}
+#intro {
+    margin:10px auto;
+    width: 80vw;
+    justify-content: center;
+    font-size: 150%;
+    height:20vh;
+    background-color: grey;
+    color:navy;
+    text-align: center;
+}
+
+#containerOne {
+  display: flex;        
+  justify-content: center;
+  align-items: center;
+  gap: 10px;              
+  flex-wrap: wrap;     
+}
+
+
+#hobbyOne img {
+  width: 30%;             
+  height: auto;               
+  border-radius: 8px;     
+  max-width: 30vw;       
+}
+
+
+#containerTwo {
+  display: flex;        
+  justify-content: center;
+  align-items: center;
+  gap: 10px;              
+  flex-wrap: wrap;     
+}
+
+
+#hobbyTwo img {
+  width: 30%;             
+  height: auto;               
+  border-radius: 8px;     
+  max-width: 30vw;       
+}

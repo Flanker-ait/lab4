@@ -1,0 +1,30 @@
+# Lab3
+
+**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
+
+* *Date Created*: 25-20-2025
+* *Last Modification Date*: 25-20-2025
+* *Git lab URL:https://git.cs.dal.ca/tfeng/csci3172/-/tree/main/lab/lab3?ref_type=heads
+* *Timberlea URL:https://web.cs.dal.ca/~tfeng/csci3172/labs/lab3/
+
+
+## Authors
+
+If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
+
+* [Tianci Feng](tn388816@dal.ca) - (Author)
+
+
+
+## Built With
+
+* [VsCode] used to write code
+* [GeeksForGeeks] - used to understand the use of Object.keys() https://www.geeksforgeeks.org/javascript/javascript-object-keys-method/
+* [Random Word Generator] - used to generate random names  https://randomwordgenerator.com/name.php
+
+
+
+## Code explain 
+Four components need to be tested: username, email, password, and confirm password. For the first three, I created a pattern for each, and for the last one, I just compared it to the password to see if they matched. If there is an error with the pattern or comparison, the alert method will throw an error in the window, depending on the situation. If all validations pass, the user information will be added to the map, which is a place to store all user information, and the unique username will be stored in the Set because sets do not allow duplicate values. 
+On the login page, two components need to be tested: the username and password fields. After getting the user input, using the get() and has() methods in the map, I can check whether the username is valid and retrieve the corresponding password. There will be an alert message for users indicating whether they pass validation.
+The reason I want to use a map is that each entry contains both a key and a value, making it easy to validate a password given a username. And using Set can validate if the username has already been used.

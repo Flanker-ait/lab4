@@ -1,0 +1,36 @@
+ Lab
+
+**[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
+
+* *Date Created*: 15-10-2025
+* *Last Modification Date*: 15-10-2025
+* *Lab URL*: <http://example.com/>
+* * Git lab link: https://git.cs.dal.ca/tfeng/csci3172/-/tree/main/lab/lab2?ref_type=heads
+* * Timberlea link:https://web.cs.dal.ca/~tfeng/csci3172/labs/lab2/
+
+
+## Authors
+
+If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
+
+* [Tianci Feng](tn38816@dal.ca) - (Author)
+
+
+
+## Built With
+
+<!--- Provide a list of the frameworks used to build this application, your list should include the name of the framework used, the url where the framework is available for download and what the framework was used for, see the example below --->
+
+
+* [VS CODE] - Used to edit code
+* [Bootstrap] - Use the framework to edit the frontend feature: https://getbootstrap.com/docs/5.3/examples/
+* [Geeks For Geeks] - Used to understand the for loop in JS: https://www.geeksforgeeks.org/javascript/javascript-array-findindex-method/
+
+
+
+
+## Sources Used
+
+If in completing your lab / assignment / project you used any interpretation of someone else's code, then provide a list of where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
+
+

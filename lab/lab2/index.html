@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to my music shop</h1>
+
+    <button id="listItem" class="btn btn-info">List the inventory</button>
+    <div id="display"></div>
+
+
+
+    <form action="">
+        <label for="addItemName">Please add the item name</label>
+        <input type="text" id="addItemName" required>
+        <label for="addItemNumber">Please add the item number</label>
+        <input type="text" id="addItemNumber" required>
+        <input type="submit" value="add" id="addItem" class="btn btn-info">
+    </form>
+
+
+    <form action="" id="deleteForm">
+        <label for="deleteItemName">Please enter the Item name to delete</label>
+        <input type="text" id="deleteItemName" required>
+        <input type="submit" value="delete" id="deleteItem" class="btn btn-info">
+    </form>
+
+    <form action="">
+        <label for="getItemName">Please enter the Item name to get</label>
+        <input type="text" id="getItemName" required>
+        <input type="submit" value="getItem" id="getItem" class="btn btn-info"> 
+        <div id="get"></div>
+    </form>
+
+
+
+    <form action="">
+        <input type="submit" value="calculate" id="calculate" class="btn btn-info">
+        <div id="totalValue"></div>
+    </form>
+
+
+    <form action="">
+        <label for="querySearch">Please enter whether the product name or type to search item</label>
+        <input type="text" id="querySearch">
+        <input type="button" value="search" id="searchBtn" class="btn btn-info">
+        <div id="searchResult"></div>
+    </form>
+
+
+</body>
+<script src="musicShopItem.js"></script>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+  color:darkgoldenrod;
+  background-color: navy;
+}
+
+#deleteForm{
+  margin-bottom: 10px;
+}

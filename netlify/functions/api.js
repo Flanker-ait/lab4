@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.send(htmlFile);
 });
 
-app.post("https://incomparable-monstera-060408.netlify.app/api/search", async (req, res) => {
+app.post("/search", async (req, res) => {
     console.log("htgfjdk");
   let reqData = "";
   req.on("data", chunk => (reqData += chunk));

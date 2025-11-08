@@ -38,7 +38,7 @@ document.getElementById("recForm").addEventListener("submit", async (e) => {
  
 
   const response = await fetch("/api/search", {
-    method: "POST",
+    method: "GET",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ artist, genre })
   });

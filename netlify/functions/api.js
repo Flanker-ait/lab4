@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.send(htmlFile);
 });
 
-app.post("/search", async (req, res) => {
+app.post("api/search", async (req, res) => {
     console.log("htgfjdk");
   let reqData = "";
   req.on("data", chunk => (reqData += chunk));

@@ -1,6 +1,6 @@
 [build]
-  functions = "netlify/functions"
   publish = "."
+  functions = "netlify/functions"
 
 [functions]
   external_node_modules = ["express"]
@@ -8,6 +8,7 @@
   included_files = ["index.html", "error.html"]
 
 [[redirects]]
-from = "/api/*"
-to = "/.netlify/functions/api/:splat"
-status = 200
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true

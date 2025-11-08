@@ -7,18 +7,19 @@ const dotenv = require("dotenv");
 const querystring = require("querystring");
 
 const app = express();
-dotenv.config();
+
 
 
 const htmlFile = fs.readFileSync(path.join(__dirname, '../../index.html'), 'utf-8');
 const errorHtml = fs.readFileSync(path.join(__dirname, '../../error.html'), 'utf-8');
 
 app.get("/", (req, res) => {
+    console.log("htgfjdk");
   res.send(htmlFile);
 });
 
 app.post("api/search", async (req, res) => {
-    console.log("htgfjdk");
+
   let reqData = "";
   req.on("data", chunk => (reqData += chunk));
   req.on("end", async () => {

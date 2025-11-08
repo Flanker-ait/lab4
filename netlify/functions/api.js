@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const fs = require("fs");
 const serverless = require("serverless-http");
-const fetch = require("node-fetch");
+
 
 const app = express();
 

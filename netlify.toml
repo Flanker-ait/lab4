@@ -8,7 +8,6 @@
   included_files = ["index.html", "error.html"]
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
-  force = true
+from = "/api/*"
+to = "/.netlify/functions/api"
+status = 200

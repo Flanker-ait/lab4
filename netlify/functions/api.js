@@ -1,23 +1,25 @@
-const express = require('express');
-const fs = require('fs');
-const serverless = require('serverless-http');
-const fetch = require('node-fetch');
-const dotenv = require('dotenv');
-const querystring = require('querystring');
+const path = require("path");
+const express = require("express");
+const fs = require("fs");
+const serverless = require("serverless-http");
+const fetch = require("node-fetch");
+const dotenv = require("dotenv");
+const querystring = require("querystring");
 
 const app = express();
 dotenv.config();
 
-let htmlFile = fs.readFileSync('./index.html', 'utf-8');
-let errorHtml = fs.readFileSync('./error.html', 'utf-8');
+// ✅ FIX: Use __dirname to find the correct root path
+const htmlFile = fs.readFileSync(path.join(__dirname, "../../index.html"), "utf-8");
+const errorHtml = fs.readFileSync(path.join(__dirname, "../../error.html"), "utf-8");
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send(htmlFile);
 });
 
-app.post('/search', async (req, res) => {
+app.post("/search", async (req, res) => {
   let reqData = "";
-  req.on("data", chunk => reqData += chunk);
+  req.on("data", chunk => (reqData += chunk));
   req.on("end", async () => {
     try {
       const reqParams = JSON.parse(reqData);

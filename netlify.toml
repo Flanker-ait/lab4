@@ -1,3 +1,8 @@
+[build]
+  functions = "netlify/functions"
+  publish = "."
+  included_files = ["index.html", "error.html"]
+
 [functions]
   directory = "netlify/functions"
   external_node_modules = ["express"]
